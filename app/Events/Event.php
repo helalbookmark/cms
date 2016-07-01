@@ -1,6 +1,6 @@
 <?php
 
-namespace cms\Events;
+namespace Cms\Events;
 
 abstract class Event
 {

@@ -11,7 +11,7 @@
 |
 */
 
-$factory->define(cms\User::class, function (Faker\Generator $faker) {
+$factory->define(Cms\User::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->name,
         'email' => $faker->safeEmail,

@@ -1,10 +1,10 @@
 <?php
 
-namespace cms\Http\Controllers\Auth;
+namespace Cms\Http\Controllers\Auth;
 
-use cms\User;
+use Cms\User;
 use Validator;
-use cms\Http\Controllers\Controller;
+use Cms\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 

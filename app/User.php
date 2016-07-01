@@ -1,6 +1,6 @@
 <?php
 
-namespace cms;
+namespace Cms;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 

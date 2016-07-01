@@ -1,6 +1,6 @@
 <?php
 
-namespace cms\Exceptions;
+namespace Cms\Exceptions;
 
 use Exception;
 use Illuminate\Validation\ValidationException;

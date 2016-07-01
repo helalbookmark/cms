@@ -1,6 +1,8 @@
 <?php
 
-namespace cms\Providers;
+namespace Cms\Providers;
+
+use Cms\View\ThemeViewFinder;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -14,6 +16,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         //
+        // $this->app['view']->setFinder($this->app['theme.finder']);
     }
 
     /**
@@ -27,5 +30,13 @@ class AppServiceProvider extends ServiceProvider
         if ($this->app->environment() == 'local') {
             $this->app->register('Laracasts\Generators\GeneratorsServiceProvider');
         }
+        
+        $this->singleton('theme.finder',function($app){
+            $finder =new ThemeViewFinder( $app['files'],$app['config']['view.paths']);
+            $config = $app['config']['cms.theme'];
+            $finder -> setBasePath($app['path.public']."/".config['folder']);
+            $finder -> setActiveTheme($config['active']);
+            return $finder;
+        });
     }
 }

@@ -7,6 +7,8 @@
  * @author   Taylor Otwell <taylorotwell@gmail.com>
  */
 
+
+
 /*
 |--------------------------------------------------------------------------
 | Register The Auto Loader
@@ -20,6 +22,7 @@
 */
 
 require __DIR__.'/../bootstrap/autoload.php';
+
 
 /*
 |--------------------------------------------------------------------------
@@ -35,6 +38,7 @@ require __DIR__.'/../bootstrap/autoload.php';
 
 $app = require_once __DIR__.'/../bootstrap/app.php';
 
+
 /*
 |--------------------------------------------------------------------------
 | Run The Application
@@ -49,9 +53,14 @@ $app = require_once __DIR__.'/../bootstrap/app.php';
 
 $kernel = $app->make(Illuminate\Contracts\Http\Kernel::class);
 
+//var_dump( $kernel);
+//dd( $kernel);
+
 $response = $kernel->handle(
     $request = Illuminate\Http\Request::capture()
 );
+
+
 
 $response->send();
 

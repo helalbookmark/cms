@@ -1,6 +1,6 @@
 <?php
 
-namespace cms\Http\Middleware;
+namespace Cms\Http\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Auth;

@@ -1,6 +1,6 @@
 <?php
 
-namespace cms\Console\Commands;
+namespace Cms\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Foundation\Inspiring;
