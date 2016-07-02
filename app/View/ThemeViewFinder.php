@@ -17,6 +17,6 @@ class ThemeViewFinder extends FileViewFinder
     public function setActiveTheme($theme)
     {
         $this->activeTheme =$theme;
-        array_unshift( $this->paths, $this->basePath .'/'. $theme ."/view" );
+        array_unshift( $this->paths, $this->basePath .'/'. $theme ."/views" );
     }
 }
